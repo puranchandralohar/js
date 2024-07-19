@@ -51,3 +51,10 @@ print(Hello)
 // Serve - 1 min
 
 
+const object = {
+    fileSixe:"233",
+    url:"link"
+}
+
+object.url
+object['url']

@@ -21,15 +21,18 @@
 // fetch(URL, options)
 
 // API - JSON {key: value}
+const emoji = document.getElementById('emoji');
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://emojihub.yurace.pro/api/all')
     .then((response)=>{
         console.log(response);
         return response.json();
     }).then((data)=>{
         data.map((value)=>{
-            console.log(value.title);
+            console.log(value.htmlCode[0]);
+            emoji.innerHTML += value.htmlCode[0];
         })
+        // console.log(data);
     })
 
 
